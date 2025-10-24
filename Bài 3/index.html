@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cửa hàng Sách ABC</title>
+    <meta
+      name="description"
+      content="Cửa hàng Sách ABC - sách hay, giá tốt, giao hàng nhanh"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Cửa hàng Sách ABC</h1>
+
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="#home">Trang chủ</a></li>
+          <li><a href="#products">Sản phẩm</a></li>
+          <li><a href="#contact">Liên hệ</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home">
+        <h2>Chào mừng đến với Cửa hàng Sách ABC</h2>
+        <p>
+          Chúng tôi mang đến những cuốn sách tuyển chọn về kỹ năng sống, kinh
+          doanh và phát triển bản thân. Giá tốt, giao hàng nhanh.
+        </p>
+      </section>
+
+      <section id="products">
+        <h2>Danh sách sản phẩm</h2>
+
+        <!-- Thanh tìm kiếm -->
+        <div id="search-bar">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Tìm kiếm sản phẩm..."
+          />
+          <button id="searchBtn">tìm</button>
+        </div>
+
+        <!-- Nút mở form thêm sản phẩm -->
+        <div style="margin-top: 1rem">
+          <button id="addProductBtn">thêm sản phẩm</button>
+        </div>
+
+        <!-- Form thêm sản phẩm (ẩn mặc định) -->
+        <form id="addProductForm" class="hidden">
+          <h3>Thêm sản phẩm mới</h3>
+          <label for="newName">Tên sản phẩm:</label>
+          <input type="text" id="newName" required />
+
+          <label for="newPrice">Giá:</label>
+          <input type="number" id="newPrice" required />
+
+          <label for="newDesc">Mô tả:</label>
+          <textarea id="newDesc" rows="3"></textarea>
+
+          <button type="submit">Thêm</button>
+        </form>
+
+        <!-- Danh sách sản phẩm -->
+        <div id="product-list">
+          <article class="product-item" aria-labelledby="p1-title">
+            <h3 id="p1-title" class="product-name">Sách: Tư duy làm giàu</h3>
+            <img src="assest/book1.jpg" alt="Bìa sách Tư duy làm giàu" />
+            <p class="product-desc">
+              Một cuốn sách giúp bạn xây dựng tư duy tài chính và kỹ năng khởi
+              nghiệp.
+            </p>
+            <p class="product-price">Giá: <span>150.000₫</span></p>
+          </article>
+
+          <article class="product-item" aria-labelledby="p2-title">
+            <h3 id="p2-title" class="product-name">Sách: Kỹ năng giao tiếp</h3>
+            <img src="assest/book2.png" alt="Bìa sách Kỹ năng giao tiếp" />
+            <p class="product-desc">
+              Kỹ năng thiết thực để thuyết phục và kết nối hiệu quả trong công
+              việc và cuộc sống.
+            </p>
+            <p class="product-price">Giá: <span>120.000₫</span></p>
+          </article>
+
+          <article class="product-item" aria-labelledby="p3-title">
+            <h3 id="p3-title" class="product-name">
+              Sách: Lãnh đạo truyền cảm hứng
+            </h3>
+            <img
+              src="assest/book3.jpg"
+              alt="Bìa sách Lãnh đạo truyền cảm hứng"
+            />
+            <p class="product-desc">
+              Những câu chuyện thực tế và bài học ứng xử dành cho nhà quản lý
+              tương lai.
+            </p>
+            <p class="product-price">Giá: <span>180.000₫</span></p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Liên hệ / Đăng ký nhận tin</h2>
+
+        <form id="contact-form" action="#" method="post">
+          <div>
+            <label for="name">Họ và tên</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Nhập họ tên"
+              required
+            />
+          </div>
+
+          <div>
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="example@domain.com"
+              required
+            />
+          </div>
+
+          <div>
+            <label for="message">Nội dung</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              placeholder="Nhập nội dung"
+              required
+            ></textarea>
+          </div>
+
+          <div>
+            <button type="submit">Gửi</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Cửa hàng Sách ABC. Địa chỉ: 123 Đường Sách, Thành phố.</p>
+    </footer>
+
+    <!-- JS -->
+    <script src="main.js"></script>
+  </body>
+</html>
